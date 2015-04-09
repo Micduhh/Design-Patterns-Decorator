@@ -1,0 +1,18 @@
+//Micah Netz
+import java.util.*;
+
+public abstract class Tree 
+{
+    String description = "Tree";
+  
+    public String getDescription() 
+    {
+        return description;
+    }
+ 
+    public abstract double cost();
+    
+    /*
+    public boolean hasStar = false;//This may need to be changed depending on implementation.
+    */
+}
