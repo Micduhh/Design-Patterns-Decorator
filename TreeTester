@@ -1,0 +1,22 @@
+//Micah Netz
+//CSCD 349-01 Decorator Assignment #3
+
+import java.util.*;
+
+public class TreeTester
+{
+   public static void main(String[]args)
+   {
+      Tree mytree = new BlueSpruce();
+      mytree = new Star(mytree);
+      mytree = new Ruffles(mytree);
+      if(mytree.hasStar)
+      {
+         System.out.println("Tree already has a star.");
+      }
+      mytree = new Star(mytree); //this is problematic!
+      mytree = new Ruffles(mytree);
+      System.out.println("Tree description: " + mytree.getDescription() + " \nTotal Cost: " + mytree.cost());
+   }
+
+}
