@@ -8,13 +8,24 @@ public class TreeTester
    public static void main(String[]args)
    {
       Tree mytree = new BlueSpruce();
-      mytree = new Star(mytree);
-      mytree = new Ruffles(mytree);
-      if(mytree.hasStar)
+      try
       {
-         System.out.println("Tree already has a star.");
+         mytree = new Star(mytree);
       }
-      mytree = new Star(mytree); //this is problematic!
+      catch(Exception e)
+      {
+      
+      }
+      mytree = new Ruffles(mytree);
+      
+      try
+      {
+      m  ytree = new Star(mytree); //this is problematic!
+      }
+      catch(Exception e)
+      {
+      
+      }
       mytree = new Ruffles(mytree);
       System.out.println("Tree description: " + mytree.getDescription() + " \nTotal Cost: " + mytree.cost());
    }
