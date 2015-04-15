@@ -1,9 +1,14 @@
 public class Star extends TreeDecorator 
 {
     Tree tree;
+    private String myDescription = "Star";
 
-    public Star(Tree tree) 
+    public Star(Tree tree) throws Exception
     {
+        if(tree.getDescription().contains(myDescription))
+        {
+            throw new Exception("Tree already has a star.");
+        }
         this.tree = tree;
     }
 
